@@ -4,19 +4,30 @@
 package sequality;
 
 public class App {
+  Calculate calc = new Calculate();
+
   public String getGreeting() {
     return "Hello World!";
   }
 
-  public static void main(String[] args) {
-    Calculate calc = new Calculate();
-    System.out.println(new App().getGreeting());
-    System.out.println("2と3の合計は" + calc.total(2, 3) + "です。平均値は" + calc.average(2, 3) + "です。");
-    System.out.println("2と3の合計は" + calc.sum(2, 3) + "です。平均値は" + calc.average(2, 3) + "です。");
-    System.out.println("1から10の合計は" + calc.total(1, 10) + "です。平均値は" + calc.average(1, 10) + "です。");
+  public String get2To3() {
+    return "2と3の合計は" + calc.total(2, 3) + "です。平均値は" + calc.average(2, 3) + "です。";
+  }
 
-    System.out
-        .println("1から10の奇数の合計は" + calc.parityTotal(1, 10).odd + "です。偶数の合計は" + calc.parityTotal(1, 10).even + "です。");
+  public String get1To10() {
+    return "1から10の合計は" + calc.total(1, 10) + "です。平均値は" + calc.average(1, 10) + "です。";
+
+  }
+
+  public String get1To10Parity() {
+    return "1から10の奇数の合計は" + calc.parityTotal(1, 10).odd + "です。偶数の合計は" + calc.parityTotal(1, 10).even + "です。";
+  }
+
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+    System.out.println(new App().get2To3());
+    System.out.println(new App().get1To10());
+    System.out.println(new App().get1To10Parity());
 
   }
 }
