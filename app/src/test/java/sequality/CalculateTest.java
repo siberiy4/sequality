@@ -35,4 +35,24 @@ public class CalculateTest {
 
   }
 
+  public void testParityTotalOnlyOdd() {
+    Calculate calculate = new Calculate();
+    int expectedOdd = 5;
+    int expectedEven = 0;
+
+    assertEquals(expectedOdd, calculate.parityTotal(5, 5).odd);
+    assertEquals(expectedEven, calculate.parityTotal(5, 5).even);
+
+  }
+
+  public void testParityTotalOnlyEven() {
+    Calculate calculate = new Calculate();
+    int expectedOdd = 0;
+    int expectedEven = 8;
+
+    assertEquals(expectedOdd, calculate.parityTotal(8, 8).odd);
+    assertEquals(expectedEven, calculate.parityTotal(8, 8).even);
+
+  }
+
 }
