@@ -18,4 +18,22 @@ public class AppTest {
     App classUnderTest = new App();
     assertEquals("Hello World!", classUnderTest.getGreeting());
   }
+
+  @Test
+  public void testAppReternSumOf2To3() {
+    App classUnderTest = new App();
+    assertEquals("2と3の合計は5です。平均値は2.5です。", classUnderTest.get2To3());
+  }
+
+  @Test
+  public void testAppReternSumOf1To10() {
+    App classUnderTest = new App();
+    assertEquals("1から10の合計は55です。平均値は22.5です。", classUnderTest.get1To10());
+  }
+
+  @Test
+  public void testAppReternSumOf1To10Parity() {
+    App classUnderTest = new App();
+    assertEquals("1から10の奇数の合計は25です。偶数の合計は30です。", classUnderTest.get1To10Parity());
+  }
 }
